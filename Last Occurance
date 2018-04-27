@@ -1,0 +1,35 @@
+//https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/last-occurence/description/
+
+#include<stdio.h>
+int main()
+{
+    int t,N,i,Q,ch,j,count;
+    scanf("%d",&t);
+    scanf("%d",&N);
+    int arr[N];
+    for(i=0;i<N;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    scanf("%d",&Q);
+    for(i=0;i<Q;i++)
+    {
+        count=0;
+        scanf("%d",&ch);
+        for(j=0;j<N;j++)
+        {
+            if(ch==arr[j])
+            {
+                count=j+1;
+            }
+        }
+        if(count!=0)
+        {
+            printf("%d\n",count);
+        }
+        else
+        {
+            printf("-1\n");
+        }
+    }
+}
